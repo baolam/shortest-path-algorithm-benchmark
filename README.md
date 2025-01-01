@@ -7,10 +7,10 @@
 - Thuật toán Dijkstra
 - Thuật toán A\*
 
-## Tiêu chí so sánh:
+## Tiêu chí so sánh (dựa trên thời gian thực thi thuật toán)
 
-- Thời gian thực thi thuật toán
-- Bộ nhớ chiếm dụng
+- Vấn đề, kiểm tra sự tồn tại đường đi giữa hai vị trí được cho
+- Vấn đề, kiểm tra đường đi ngắn nhất giữa hai vị trí được cho
 
 ## So sánh trên các bộ dữ liệu:
 
@@ -36,5 +36,13 @@
     - `description.txt`
   - `...`
 
-- `src/` : lưu trữ các phần chương trình
+- `src/`
+
+  - `algorithm/` : chứa mã cài đặt các thuật toán
+  - `base/` : chứa mã cài đặt một số cấu trúc dữ liệu, hàm hỗ trợ phục vụ thuật toán
+  - **constant.py** : file chứa những biến cài đặt cho toàn bộ chương trình
+  - **data_folder_manager.py** : file chứa những hàm phục vụ quản lí bộ dữ liệu test
+  - **fake_generate_maze.py** : file chứa chương trình sinh mê cung, phục vụ cho test
+  - ****init**.py** : file chứa một số hàm tiện ích
+
 - **main.py** : file thực thi chính
