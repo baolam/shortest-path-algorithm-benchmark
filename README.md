@@ -27,16 +27,16 @@
 
 - Cài đặt trên tình huống tìm đường đi trong mê cung
 
-## Tổ chức dữ liệu benchmark
+```markdown
+## Cấu trúc dự án
 
-data
-test1
-input.txt
-description.txt
-test2
-...
-...
-test3
-...
-...
-...
+- `data/`
+
+  - `test_1`
+    - `input.txt`
+    - `description.txt`
+  - `...`
+
+- `src/` : lưu trữ các phần chương trình
+- **main.py** : file thực thi chính
+```
