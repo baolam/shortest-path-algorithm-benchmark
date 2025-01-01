@@ -23,3 +23,6 @@ def dfs_exist_path(size, position, matrix):
         visited[move[0]][move[1]] = True
 
   return False
+
+def dfs_shortest_path(self):
+  pass

@@ -6,10 +6,10 @@ root_folder = FOLDER_TEST
 if not os.path.exists(root_folder):
   raise ValueError(f"Không có thư mục lưu trữ bộ dữ liệu: {root_folder}")
 
-def read_test(test_name : str):
+def read_test(criteria : str, test_name : str):
   # Đọc dữ liệu test đầu vào để áp dụng thuật toán
   # test_folder: thư mục chứa dữ liệu test
-  _test_folder = os.path.join(root_folder, test_name)
+  _test_folder = os.path.join(root_folder, criteria ,test_name)
   if not os.path.exists(_test_folder):
     raise ValueError(f"Không có thư mục lưu trữ dữ liệu test: {_test_folder}")
   input_file = os.path.join(_test_folder, "input.txt")
@@ -27,10 +27,10 @@ def read_test(test_name : str):
 
   return size, ((start_x, start_y), (end_x, end_y)), matrix
 
-def write_test(test_name : str, size, position, matrix):
+def write_test(criteria, test_name : str, size, position, matrix):
   # Ghi dữ liệu test đầu ra
   # test_folder: thư mục chứa dữ liệu test
-  _test_folder = os.path.join(root_folder, test_name)
+  _test_folder = os.path.join(root_folder, criteria ,test_name)
   if not os.path.exists(_test_folder):
     os.makedirs(_test_folder)
   output_file = os.path.join(_test_folder, "input.txt")
@@ -48,15 +48,16 @@ def write_test(test_name : str, size, position, matrix):
   
   f.close()
 
-def write_test_without_test_name(size, position, matrix):
+def write_test_without_test_name(criteria, size, position, matrix):
   # Ghi dữ liệu test đầu ra
   # test_folder: thư mục chứa dữ liệu test
 
   num_tests = len(os.listdir(root_folder))
   test_name = "test_" + str(num_tests + 1)
 
-  return write_test(test_name, size, position, matrix)
+  return write_test(criteria, test_name, size, position, matrix)
 
-def get_tests():
+def get_tests(criteria):
   # Trả về những tên file test
-  return os.listdir(root_folder)
+  _path = os.path.join(root_folder, criteria)
+  return os.listdir(_path)

@@ -25,3 +25,7 @@ def bfs_exist_path(size, position, matrix):
         visited[move[0]][move[1]] = True
 
   return False
+
+
+def bfs_shortest_path(size, position, matrix):
+  pass
