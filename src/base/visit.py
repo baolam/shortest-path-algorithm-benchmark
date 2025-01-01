@@ -8,10 +8,12 @@ def get_possible_move(x, y, matrix):
   
   for direction in DIRECTIONS:
     new_x, new_y = x + direction[0], y + direction[1]
+    
     if not (0 <= new_x < size and 0 <= new_y < size):
       continue
     if matrix[new_x][new_y] == CAN_NOT_WALK:
       continue
+
     possible_move.append((new_x, new_y))
   
   return possible_move

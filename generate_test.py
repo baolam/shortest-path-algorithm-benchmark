@@ -7,6 +7,6 @@ num_test = 10
 
 print("Đang tiến hành sinh test...")
 for i in tqdm(range(1, num_test + 1)):
-  size, position, matrix = generate_test(weightable=True)
+  size, position, matrix = generate_test(weightable=False)
   write_test_without_test_name(size, position, matrix)
 print("Hoàn thành sinh test....")

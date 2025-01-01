@@ -15,7 +15,7 @@ def _generate_barrier(size, portion_barrier : int = PORTION_BARRIER):
 
   for _ in range(num_barrier):
     x, y = __generate_pos(size), __generate_pos(size)
-    _barrier[x][y] = 1
+    _barrier[x][y] = CAN_NOT_WALK
   
   return _barrier
 
@@ -26,7 +26,7 @@ def _generate_weights(barrier_matrix):
   
   for i in range(size):
     for j in range(size):
-      if not barrier_matrix[i][j]:
+      if barrier_matrix[i][j] != CAN_NOT_WALK:
         weights[i][j] = random.randint(MIN_WEIGHT, MAX_WEIGHT)
 
   return weights
@@ -36,13 +36,12 @@ def _generate_position(size, barrier):
   start_x, start_y = __generate_pos(size), __generate_pos(size)
   end_x, end_y = __generate_pos(size), __generate_pos(size)
 
-  while (start_x, start_y) >= (end_x, end_y):
+  while start_x >= end_x or start_y >= end_y:
     start_x, start_y = __generate_pos(size), __generate_pos(size)
-    end_x, end_y = __generate_pos(size), __generate_pos(size)
-
     while barrier[start_x][start_y]:
       start_x, start_y = __generate_pos(size), __generate_pos(size)
-      
+
+    end_x, end_y = __generate_pos(size), __generate_pos(size)
     while barrier[end_x][end_y]:
       end_x, end_y = __generate_pos(size), __generate_pos(size)
 

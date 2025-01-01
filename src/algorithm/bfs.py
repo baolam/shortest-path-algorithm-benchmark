@@ -13,13 +13,15 @@ def bfs_exist_path(size, position, matrix):
     current = queue.pop()
 
     x, y = current
+
     visited[x][y] = True
-    
+
     if current == end:
       return True
     
     for move in get_possible_move(x, y, matrix):
       if not visited[move[0]][move[1]]:
         queue.push((move[0], move[1]))
+        visited[move[0]][move[1]] = True
 
   return False
