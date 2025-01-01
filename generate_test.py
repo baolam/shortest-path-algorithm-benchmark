@@ -1,7 +1,7 @@
 from tqdm import tqdm
 
 from src.fake_generate_maze import generate_test
-from data_folder_manager import write_test_without_test_name
+from src.data_folder_manager import write_test_without_test_name
 
 num_test = int(input("Hãy nhập số lượng test muốn sinh: "))
 criteria = input("Hãy nhập tiêu chuẩn đánh giá bạn muốn sinh dữ liệu: ")

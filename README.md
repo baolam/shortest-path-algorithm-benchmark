@@ -23,17 +23,14 @@
 - Các rào cản trong mê cung
 - Các điểm thưởng trong mê cung
 
-## Vấn đề đối chiếu
-
-- Cài đặt trên tình huống tìm đường đi trong mê cung
-
 ## Cấu trúc dự án
 
 - `data/`
 
-  - `test_1`
-    - `input.txt`
-    - `description.txt`
+  - `(criteria)`
+    - `test_1`
+      - `input.txt`
+    - ...
   - `...`
 
 - `src/`
