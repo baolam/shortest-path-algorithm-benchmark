@@ -56,3 +56,7 @@ def write_test_without_test_name(size, position, matrix):
   test_name = "test_" + str(num_tests + 1)
 
   return write_test(test_name, size, position, matrix)
+
+def get_tests():
+  # Trả về những tên file test
+  return os.listdir(root_folder)

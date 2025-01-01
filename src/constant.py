@@ -1,6 +1,6 @@
 # Dùng cho sinh kích thước
-MIN_SIZE = 10
-MAX_SIZE = 20
+MIN_SIZE = 20
+MAX_SIZE = 200
 
 # Dùng cho sinh trọng số
 MIN_WEIGHT = 5

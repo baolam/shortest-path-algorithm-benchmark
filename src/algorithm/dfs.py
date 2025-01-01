@@ -8,7 +8,7 @@ def dfs_exist_path(size, position, matrix):
   stack = Stack()
   stack.push(start)
 
-  while not stack.is_empty():
+  while not stack.empty():
     current = stack.pop()
 
     x, y = current
