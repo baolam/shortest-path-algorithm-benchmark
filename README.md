@@ -43,6 +43,4 @@
   - **constant.py** : file chứa những biến cài đặt cho toàn bộ chương trình
   - **data_folder_manager.py** : file chứa những hàm phục vụ quản lí bộ dữ liệu test
   - **fake_generate_maze.py** : file chứa chương trình sinh mê cung, phục vụ cho test
-  - ****init**.py** : file chứa một số hàm tiện ích
-
-- **main.py** : file thực thi chính
+  - \***\*init**.py\*\* : file chứa một số hàm tiện ích
