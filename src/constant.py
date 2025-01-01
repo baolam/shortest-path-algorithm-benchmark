@@ -14,3 +14,11 @@ CAN_NOT_WALK = -1
 
 # Đầu vào dữ liệu
 FOLDER_TEST = "data"
+
+# Hướng đi có thể
+DIRECTIONS = (
+  (-1, 0), # Lên
+  (1, 0), # Xuống
+  (0, -1), # Trái
+  (0, 1), # Phải
+)

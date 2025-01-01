@@ -32,7 +32,7 @@ def _generate_position(size):
   # Hàm sinh vị trí xuất phát và đích
   start_x, start_y = random.randint(0, size - 1), random.randint(0, size - 1)
   end_x, end_y = random.randint(0, size - 1), random.randint(0, size - 1)
-  while (start_x, start_y) == (end_x, end_y):
+  while (start_x, start_y) >= (end_x, end_y):
     end_x, end_y = random.randint(0, size - 1), random.randint(0, size - 1)
   return (start_x, start_y), (end_x, end_y)
 
