@@ -40,6 +40,7 @@
 
   - `algorithm/` : chứa mã cài đặt các thuật toán
   - `base/` : chứa mã cài đặt một số cấu trúc dữ liệu, hàm hỗ trợ phục vụ thuật toán
+
   - **constant.py** : file chứa những biến cài đặt cho toàn bộ chương trình
   - **data_folder_manager.py** : file chứa những hàm phục vụ quản lí bộ dữ liệu test
   - **fake_generate_maze.py** : file chứa chương trình sinh mê cung, phục vụ cho test
