@@ -27,7 +27,6 @@
 
 - Cài đặt trên tình huống tìm đường đi trong mê cung
 
-```markdown
 ## Cấu trúc dự án
 
 - `data/`
@@ -39,4 +38,3 @@
 
 - `src/` : lưu trữ các phần chương trình
 - **main.py** : file thực thi chính
-```
