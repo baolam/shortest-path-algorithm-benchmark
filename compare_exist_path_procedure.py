@@ -1,17 +1,10 @@
 import cProfile
-import pstats
 
 from src.algorithm.bfs import bfs_exist_path
 from src.algorithm.dfs import dfs_exist_path
-from src.data import read_test, get_tests
+from src import pattern_comparison
 
-criteria = "exist_path"
-tests = [read_test(test) for test in get_tests()]
-
-def _evaluate(algorithm):
-  for size, position, matrix in tests:
-    algorithm(size, position, matrix)
-
+_evaluate = pattern_comparison("exist_path")
 
 def main():
   _evaluate(bfs_exist_path)

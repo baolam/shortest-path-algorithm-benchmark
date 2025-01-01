@@ -30,7 +30,7 @@ def read_test(criteria : str, test_name : str):
 def write_test(criteria, test_name : str, size, position, matrix):
   # Ghi dữ liệu test đầu ra
   # test_folder: thư mục chứa dữ liệu test
-  _test_folder = os.path.join(root_folder, criteria ,test_name)
+  _test_folder = os.path.join(root_folder, criteria, test_name)
   if not os.path.exists(_test_folder):
     os.makedirs(_test_folder)
   output_file = os.path.join(_test_folder, "input.txt")
@@ -52,7 +52,7 @@ def write_test_without_test_name(criteria, size, position, matrix):
   # Ghi dữ liệu test đầu ra
   # test_folder: thư mục chứa dữ liệu test
 
-  num_tests = len(os.listdir(root_folder))
+  num_tests = len(os.listdir(os.path.join(root_folder, criteria)))
   test_name = "test_" + str(num_tests + 1)
 
   return write_test(criteria, test_name, size, position, matrix)

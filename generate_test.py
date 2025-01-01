@@ -1,11 +1,11 @@
 from tqdm import tqdm
 
 from src.fake_generate_maze import generate_test
-from src.data import write_test_without_test_name
+from data_folder_manager import write_test_without_test_name
 
 num_test = int(input("Hãy nhập số lượng test muốn sinh: "))
-criteria = input("Hãy nhập tiêu chuẩn đánh giá bạn muốn sinh dữ liệu")
-weightable = input("Có trọng số hay không?: Yes/No")
+criteria = input("Hãy nhập tiêu chuẩn đánh giá bạn muốn sinh dữ liệu: ")
+weightable = input("Có trọng số hay không(Yes/No): ")
 if weightable == "Yes":
   weightable = True
 else:
