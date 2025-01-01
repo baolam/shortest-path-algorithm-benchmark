@@ -20,3 +20,5 @@ def dfs_exist_path(size, position, matrix):
     for move in get_possible_move(x, y, matrix):
       if not visited[move[0]][move[1]]:
         stack.push(move)
+
+  return False

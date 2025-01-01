@@ -9,7 +9,7 @@ def bfs_exist_path(size, position, matrix):
   queue = Queue()
   queue.push(start)
 
-  while queue:
+  while not queue.empty():
     current = queue.pop()
 
     x, y = current
@@ -20,4 +20,6 @@ def bfs_exist_path(size, position, matrix):
     
     for move in get_possible_move(x, y, matrix):
       if not visited[move[0]][move[1]]:
-        queue.append((move[0], move[1]))
+        queue.push((move[0], move[1]))
+
+  return False
