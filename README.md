@@ -48,6 +48,13 @@
   - **fake_generate_maze.py** : file chứa chương trình sinh mê cung, phục vụ cho test
   - \***\*init**.py\*\* : file chứa một số hàm tiện ích
 
+## Thử thực thi chương trình
+
+- Bước 1: Clone dự án về
+- Bước 2: Cài đặt các thư viện trong requirements.txt
+- (nếu chỉ muốn xem kết quả thống kê) --> cd vào results, chạy dòng lệnh snakeviz tên file tương ứng
+- (nếu muốn tạo bộ test), vào src/constant.py, chỉnh lại thông số. Sau đó chạy python generate_test.py (lưu ý khi nhập criteria, nhớ nhập đúng tên folder trong mục data)
+
 ## Kết quả thực thi
 
 - **a_star_heuristic.prof**
