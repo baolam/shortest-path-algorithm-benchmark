@@ -33,6 +33,11 @@
     - ...
   - `...`
 
+- `results/`
+
+  - `images/`
+  - ... prof : các file lưu trữ kết quả thực thi thuật toán
+
 - `src/`
 
   - `algorithm/` : chứa mã cài đặt các thuật toán
@@ -42,3 +47,18 @@
   - **data_folder_manager.py** : file chứa những hàm phục vụ quản lí bộ dữ liệu test
   - **fake_generate_maze.py** : file chứa chương trình sinh mê cung, phục vụ cho test
   - \***\*init**.py\*\* : file chứa một số hàm tiện ích
+
+## Kết quả thực thi
+
+- **a_star_heuristic.prof**
+  File lưu trữ thống kê thời gian thực thi của thuật toán a_star với vấn đề kiểm tra sự tồn tại đường đi giữa hai vị trí được cho với các hàm heuristic khác nhau (ơ-clit với mahatan)
+  - Theo kết quả thực thi, hàm mahatan hiệu quả hơn khi so với ơ-clit trong vấn đề này.
+- **exist_path.prof**
+  File lưu trữ thống kê thời gian thực thi của thuật toán BFS, DFS cho việc kiểm tra tồn tại đường đi giữa hai vị trí cho trước
+  - Theo kết quả thực thi, DFS hiệu quả hơn so với BFS trong vấn đề này.
+- **matrix_with_weight.prof**
+  File lưu trữ thống kê thời gian thực thi của các thuật toán BFS, DFS, Dijkstra, A\* (mahatan, euclid) cho việc tìm đường đi ngắn nhất giữa hai vị trí cho trước trong mê cung có trọng số
+  - Theo kết quả thực thi, thuật toán A\* (mahatan, euclid) hiệu quả hơn và mahatan hiệu quả hơn toàn bộ, tiếp đến là thuật toán Dijkstra, rồi tới BFS, cuối cùng là DFS.
+- **matrix_without_weight.prof**
+  File lưu trữ thống kê thời gian thực thi của các thuật toán BFS, DFS, Dijkstra, A\* (mahatan, euclid) cho việc tìm đường đi ngắn nhất giữa hai vị trí cho trước trong mê cung không trọng số
+  - Theo kết quả thực thi, A\* (mahatan) hiệu quả nhất, tới BFS, DFS rùi tới cuối Dijkstra
