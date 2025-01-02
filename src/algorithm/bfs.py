@@ -28,4 +28,23 @@ def bfs_exist_path(size, position, matrix):
 
 
 def bfs_shortest_path(size, position, matrix):
-  pass
+  start, end = position
+  visited = [[False for _ in range(size)] for _ in range(size)]
+  
+  queue = Queue()
+  queue.push([start])
+
+  while not queue.empty():
+    path = queue.pop()
+    current = path[-1]
+
+    if current == end:
+      return path
+    
+    visited[current[0]][current[1]] = True
+    for move in get_possible_move(current[0], current[1], matrix):
+      if not visited[move[0]][move[1]]:
+        queue.push(path + [move])
+        visited[move[0]][move[1]] = True
+
+  return []
