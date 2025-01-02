@@ -1,13 +1,13 @@
 # Dùng cho sinh kích thước
-MIN_SIZE = 20
-MAX_SIZE = 200
+MIN_SIZE = 10
+MAX_SIZE = 100
 
 # Dùng cho sinh trọng số
-MIN_WEIGHT = 5
-MAX_WEIGHT = 20
+MIN_WEIGHT = 2
+MAX_WEIGHT = 50
 
 # Tỉ lệ vật cản
-PORTION_BARRIER = 0.12
+PORTION_BARRIER = 0.25
 
 # Kí hiệu không thể đi được
 CAN_NOT_WALK = 1

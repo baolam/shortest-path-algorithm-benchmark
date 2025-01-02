@@ -12,7 +12,7 @@ class PriorityQueue:
     return len(self.__storage) == 0
   
   def push(self, item : Any, score : int | float):
-    heapq.heappush(self.__storage, (score, item))
+    heapq.heappush(self.__storage, (score, (score, item)))
   
   def pop(self):
     if self.empty():
