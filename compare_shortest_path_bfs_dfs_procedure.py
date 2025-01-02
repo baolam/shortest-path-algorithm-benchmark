@@ -12,4 +12,4 @@ def main():
   _evaluate(dfs_shortest_path)
 
 if __name__ == "__main__":
-  cProfile.run('main()', 'results/exist_path_for_shortest_path.prof')
+  cProfile.run('main()', 'results/exist_path_bfs_dfs_for_shortest_path.prof')

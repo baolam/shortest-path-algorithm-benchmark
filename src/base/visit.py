@@ -17,3 +17,7 @@ def get_possible_move(x, y, matrix):
     possible_move.append((new_x, new_y))
   
   return possible_move
+
+
+def get_visited_matrix(size):
+  return [[False for _ in range(size)] for _ in range(size)]
